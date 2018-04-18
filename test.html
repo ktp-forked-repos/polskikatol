@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display the date after changing the day of the month.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<p id="test"></p>
+
+<script>
+var day =31;
+var month =3;
+
+var dat = new Date();
+
+console.log("Day "+day);
+console.log("Month "+month);
+// console.log("Day "+day);
+// console.log("Day "+day);
+function myFunction() {
+    var d = new Date();
+    d.setMonth(month);
+    d.setDate(day);
+    document.getElementById("demo").innerHTML = "Dzien: " + d.getDate() +" Miesiąc: "+ (d.getMonth()+1);
+
+if ( (d.getMonth() === month) && (d.getDate() === day) ){
+document.getElementById("test").innerHTML = "true";
+} else {
+  document.getElementById("test").innerHTML = "false";
+  }
+
+var m = 5;
+dat.setMonth(m);
+
+  for ( i=1; i<42 ; i++){
+  		// Change day as i
+  		 dat.setDate(26);
+
+  		if( ( dat.getDate() === (26) ) && (dat.getMonth() === m ) ){
+
+        console.log((i)+" true");
+      } else console.log((i)+" false");
+
+
+
+    }
+
+}
+</script>
+
+</body>
+</html>
