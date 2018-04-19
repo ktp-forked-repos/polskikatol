@@ -18,8 +18,8 @@ var namesOfMonths = [
 // Get current date
 var dat = new Date();
 // Test different dates
- dat.setDate(20);
- dat.setMonth(4);
+// dat.setDate(20);
+// dat.setMonth(4);
 
 var month = dat.getMonth();
 var year = dat.getFullYear();
@@ -31,13 +31,14 @@ var firstDayOfMonth = dat.getDay();
 // Changing day of month
 dat.setDate(currentNrDay);
 
-console.log("Dzień tygodnia dla 1 dnia miesiąca "+firstDayOfMonth);
+// console.log("Dzień tygodnia dla 1 dnia miesiąca "+firstDayOfMonth);
 
 
 window.onload = begin;
 var contentHtmlNumbers = "";
 
-console.log("firstDayOfMonth "+firstDayOfMonth);
+// console.log("firstDayOfMonth "+firstDayOfMonth);
+
 for ( i=0; i<42 ; i++){
 
 // If robiący puste pola przed 1 dniem miesiąca
@@ -48,6 +49,7 @@ for ( i=0; i<42 ; i++){
 					contentHtmlNumbers += '<div class="daysOfMonth" id="square'+i+'"></div>';
 				}
 			} else {
+
 				// Change day as i
 			 dat.setDate(i+1-firstDayOfMonth);
 
@@ -92,8 +94,8 @@ for ( i=0; i<42 ; i++){
  dat.setDate(currentNrDay);
  dat.setMonth(month);
 
- console.log("dzien "+ dat.getDate()+ " current "+currentNrDay);
- console.log("miesiac "+ dat.getMonth()+ " current "+month);
+ // console.log("dzien "+ dat.getDate()+ " current "+currentNrDay);
+ // console.log("miesiac "+ dat.getMonth()+ " current "+month);
 
 
 function begin(){
